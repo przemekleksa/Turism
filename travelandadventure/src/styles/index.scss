@@ -1,0 +1,21 @@
+@import 'normalizer';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Heebo:100,400,700|Lobster&display=swap&subset=latin-ext');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-light;
+    font-size: 16px;
+    color: $primary-color;
+    background-color: rgb(136, 136, 136);
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}

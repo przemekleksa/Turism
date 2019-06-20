@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.slider {
+    background-image: url('./leafs.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    .greetings {
+        text-align: center;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        h2 {
+            font-family: $font-cursive;
+            font-weight: 100;
+            color: $secondary-color;
+            font-size: 30px;
+            margin: 0;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 86px;
+            margin: 0;
+        }
+    }
+    .scroll {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align:center;
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        img {
+            
+            min-height: 50%;
+            max-width: 50%;
+        }
+    }
+}
+.rest {
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+}
