@@ -10,20 +10,22 @@
         .main-footer {
             flex-flow: wrap;
             .info {
-                width: 50%;
-               
+                width: 100%;
+               img {
+                    width: 100px;
+               }
             }
             .links {
-                width: 50%;
+                width: 100%;
                 h3 {
                     padding: 0;
                 }
             }
             .twitter {
-                width: 50%;
+                width: 100%;
             }
             .instagram-gallery {
-                width: 50%;
+                width: 100%;
             }
         }
     }
@@ -47,7 +49,7 @@ footer {
         }
         .links {
             width: 25%;
-            
+            padding: 0 20px 0 0;
             h3{
                 @include h3;
                 padding: 0 20px;
@@ -69,6 +71,7 @@ footer {
         .twitter{
             width: 25%;
             padding: 0 20px 0 0;
+            word-break: break-all;
             h3{
                 @include h3;
             }
@@ -90,6 +93,8 @@ footer {
             }
             img {
                 margin: 16px 0;
+                max-width: 100%;
+                max-height: 100%;
             }
         }
     }

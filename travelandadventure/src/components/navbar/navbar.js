@@ -77,25 +77,30 @@ class Navbar extends Component {
                  {/* <div className={(this.state.isOpen && this.state.scrolled ? 'burger alternative' : 'burger')} onClick={this.toggleMenu}> */}
                     
                 <ul className={(this.state.isOpen) ? 'menu open': 'menu'}>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Destinations</a>
-                    </li>
-                    <li>
-                        <a href="#">Tours</a>
-                    </li>
-                    <li>
-                        <a href="#">Pages</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Elements</a>
-                    </li>
-
+                    <a href="#"><li>
+                        Home
+                    </li></a>
+                    <hr />
+                    <a href="#"><li>
+                        Destinations
+                    </li></a>
+                    <hr />
+                    <a href="#"><li>
+                        Tours
+                    </li></a>
+                    <hr />
+                    <a href="#"><li>
+                        Pages
+                    </li></a>
+                    <hr />
+                    <a href="#"><li>
+                        Blog
+                    </li></a>
+                    <hr />
+                    <a href="#"><li>
+                        Elements
+                    </li></a>
+                    <hr />
                 </ul>
             </nav>
          );

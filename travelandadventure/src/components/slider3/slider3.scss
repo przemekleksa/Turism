@@ -9,6 +9,20 @@
     -ms-transition: all 1s ease;
     transition: all 1s ease;
 }
+@mixin scale-phone-md {
+    @media screen and (max-width: $second-break-point){
+        flex-wrap: wrap;
+        .photo {
+            width: 50%;
+            &:nth-child(2){
+                width: 50%;
+            }
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
+}
 
 .slider3 {
     width: 100%;
@@ -45,4 +59,5 @@
             }
         }
     }
+    @include scale-phone-md;
 }

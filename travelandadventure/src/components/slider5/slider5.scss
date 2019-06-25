@@ -10,6 +10,18 @@
         transition: all 1s ease;
 }
 
+@mixin scale-phone-md{
+    @media screen and (max-width: $second-break-point) {
+        flex-wrap: wrap;
+        .big-pic {
+            width: 100%;
+        }
+        .collage {
+            width: 100%;
+        }
+    }
+}
+
 .slider5 {
     display: flex;
     width: 100%;
@@ -43,4 +55,5 @@
         }
        
     }
+    @include scale-phone-md;
 }

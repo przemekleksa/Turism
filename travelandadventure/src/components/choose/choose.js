@@ -5,7 +5,7 @@ import './choose.scss';
 const Choose = () => {
     return ( 
         <div className="choose">
-            <h2>Choose a Country For Your Next Adventure?</h2>
+            <h2>Choose a Country For Your Next Adventure</h2>
             <p>We Will Inform You When We Have Found Something Special</p>
             <form>
                 <select id="continent">

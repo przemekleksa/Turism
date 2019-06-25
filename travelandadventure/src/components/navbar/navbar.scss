@@ -16,20 +16,24 @@
         list-style-type: none;
         margin: 0 auto;
         padding: 0;
-        li {
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            font-weight: 600;
             margin: 0 40px 0 0;
+            &:hover {
+                color: $secondary-color;
+            }
             &:last-child {
                 margin: 0;
             }
-            a {
-                text-decoration: none;
-                color: $primary-color;
-                font-weight: 600;
-                &:hover {
-                    color: $secondary-color;
-                }
+            li {
             }
         }
+       hr {
+           display: none;
+           transition: .5s all;
+       }
     }
 }
 
@@ -53,6 +57,7 @@
 @mixin scale {
     @media screen and (max-width: $first-break-point) {
         display: block;
+        padding: 20px 20px 5px 20px;
         &.scrolled {
             transition: 5s all;
             .logo {
@@ -69,7 +74,11 @@
                 img {
                     width: 75px;
                 }
-                
+            }
+            hr {
+                &:last-child {
+                    display:none;
+                }
             }
         }
         .logo {
@@ -133,9 +142,18 @@
             }
         }
         ul {
-            margin: 30px 0 0 0;
+            margin: 10px 0 0 0;
             display: block;
-
+            a {
+                margin: 0;
+                li {
+                    padding: 10px 0 ;
+                }
+            }
+            hr {
+                display: block;
+                margin: 0;
+            }
         }
     }
 }
@@ -180,10 +198,11 @@ nav {
         }
         ul {
             // background-color: $primary-color;
+            a {
+                color:black;
+            }
             li {
-                a {
-                    color:black;
-                }
+                
             }
         }
         @include scale;
