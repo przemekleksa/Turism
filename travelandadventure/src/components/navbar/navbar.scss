@@ -1,14 +1,7 @@
 @import '../../styles/variables';
 
-nav {
-    display: flex;
-    padding: 20px;
-    width: 100%;
-    // border: 1px solid rgb(255, 255, 255);
-    align-items: center;
-    // z-index: 100;
+@mixin nav {
     .logo {
-        // border: 1px solid rgb(255, 255, 255);
         width: 7%;
         display: block;
         position: absolute;
@@ -21,7 +14,6 @@ nav {
         display: flex;
         justify-content: center;
         list-style-type: none;
-        // border: 1px solid rgb(255, 255, 255);
         margin: 0 auto;
         padding: 0;
         li {
@@ -34,9 +26,179 @@ nav {
                 color: $primary-color;
                 font-weight: 600;
                 &:hover {
-                    color: $link-hover-color;
+                    color: $secondary-color;
                 }
             }
         }
+    }
+}
+
+@mixin cross {
+    &:nth-child(1) {
+        top: -50px;
+        left: 0px;  
+    }
+    &:nth-child(2) {
+        bottom: 0;
+        transform: rotate(45deg);
+        left: 0px;
+    }
+    &:nth-child(3) {
+        bottom: 7px;
+        left: 0px;
+        transform: rotate(-45deg);
+    }
+}
+
+@mixin scale {
+    @media screen and (max-width: $first-break-point) {
+        display: block;
+        &.scrolled {
+            transition: 5s all;
+            .logo {
+                position: absolute;
+                left: 75px;
+                padding: 0;
+                width: 85px;
+                &.background{
+                    transform: translateY(-5px);
+                    background-color: $secondary-color;
+                    padding: 5px;
+                    left: 70px;
+                }
+                img {
+                    width: 75px;
+                }
+                
+            }
+        }
+        .logo {
+            width: 75px;
+            position: absolute;
+            left: 75px;
+            background-color: transparent;
+            img {
+                width: 175px;
+            }
+        }
+        .burger {
+            height: 20px;
+            width: 30px;
+            border: none;
+            background-color: transparent;
+            position: relative;
+            cursor: pointer;
+            &.alternative {
+                span {
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background-color: #000;
+                    position: absolute;
+                    @include cross;
+                }
+            }
+            &.noscroll {
+                span {
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $primary-color;
+                    position: absolute;
+                    @include cross;
+                }
+            }
+            span {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: $primary-color;
+                position: absolute;
+                &:nth-child(1) {
+                    top: 0px;
+                    left: 0px;
+                    transition: .5s all;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0px;
+                    transition: .5s all;
+                }
+                &:nth-child(3) {
+                    bottom: 0px;
+                    left: 0px;
+                    transition: .5s all;
+                }
+            }
+        }
+        ul {
+            margin: 30px 0 0 0;
+            display: block;
+
+        }
+    }
+}
+
+nav {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    @include nav;
+    @include scale;
+    position: relative;
+    .closed {
+        position: absolute;
+        left: -600px;
+        transition: .5s all;
+        &.opened{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $primary-color;
+            height: 100%;
+            z-index:-1;
+        }
+    }
+    &.scrolled {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        padding: 20px;
+        // background-color: $primary-color;
+        transition: .5s all;
+        top:0;
+        left:0;
+        z-index: 3;
+        @include nav; 
+        .logo {
+            background-color: $secondary-color;
+            padding: 5px;
+        }
+        ul {
+            // background-color: $primary-color;
+            li {
+                a {
+                    color:black;
+                }
+            }
+        }
+        @include scale;
+    }
+}
+
+.menu{
+    position: absolute;
+    left: -400px;
+    transition: 1s all;
+    visibility: hidden;
+    &.open {
+        position: static;
+        left: 20px;
+        visibility: visible;
+        
     }
 }

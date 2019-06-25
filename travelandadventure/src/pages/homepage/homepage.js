@@ -3,6 +3,11 @@ import './homepage.scss';
 import Form from '../../components/form/form';
 import arrowDown from '../homepage/down-arrow.png';
 import Slider4 from '../../components/slider4/slider4';
+import Promo from '../../components/promo/promo';
+import Slider5 from '../../components/slider5/slider5';
+import Choose from '../../components/choose/choose';
+import Slider3 from '../../components/slider3/slider3';
+import Footer from '../../components/footer/footer';
 
 const Homepage = () => {
     return ( 
@@ -23,6 +28,11 @@ const Homepage = () => {
             <div className="rest" id="rest"> 
                 <Form />
                 <Slider4 />
+                <Promo />
+                <Slider5 />
+                <Choose />
+                <Slider3 />
+                <Footer />
             </div>
         </>
      );

@@ -1,0 +1,67 @@
+@import '../../styles/variables';
+
+@mixin form {
+    border: 2px solid white;
+    background-color: $transparent;
+    color: $primary-color;
+    padding: 15px 20px;
+    margin: 5px;
+    width: 20%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+@mixin scale {
+    @media screen and (max-width: $first-break-point) {
+       h2 {
+           font-size: 50px;
+       }
+    }
+}
+
+.choose {
+    background-image: url('./savanna.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+    width: 100%;
+    padding: 50px;
+    h2 {
+        width: 50%;
+        font-size: 100px;
+        margin: 0 auto;
+    }
+    p {
+        width: 50%;
+        // text-align: center;
+        margin: 20px auto;
+        font-family: $font-cursive;
+        font-size: 22px;
+    }
+    form {
+        text-align: center;
+        select {
+            @include form;
+            option {
+                background-color: $form-bg-color;
+                border: 2px solid white;
+            }
+        }
+        button {
+            background-color: $secondary-color;
+            border: 0px;
+            text-transform: uppercase;
+            padding: 17px 40px;
+            margin: 5px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: .4s all;
+            &:hover {
+                background-color: $hover-button-color;
+                color: $primary-color;
+            }
+        }
+    }
+    @include scale;
+}
