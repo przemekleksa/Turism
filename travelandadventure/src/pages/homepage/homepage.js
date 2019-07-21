@@ -8,10 +8,12 @@ import Slider5 from '../../components/slider5/slider5';
 import Choose from '../../components/choose/choose';
 import Slider3 from '../../components/slider3/slider3';
 import Footer from '../../components/footer/footer';
+import Navbar from '../../components/navbar/navbar';
 
 const Homepage = () => {
     return ( 
         <>
+         <Navbar />
             <div className="slider">
                 <div className="greetings">
                     <h2>Find Excitement Wherever You May Roam</h2>
