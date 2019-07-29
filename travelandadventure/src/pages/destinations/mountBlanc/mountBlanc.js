@@ -4,13 +4,15 @@ import Navbar from '../../../components/navbar/navbar';
 import './mountBlanc.scss';
 import Specs from '../../../components/specs/specs';
 
+
+
 const MountBlanc = () => {
     return ( 
         <div id="mount-blanc">
-            <div classname="top">
+            
             <Navbar/>
-                <Title />
-            </div>
+                <Title name="Mount Blanc" />
+            
             <div className="content">
             <Specs />
             </div>

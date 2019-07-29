@@ -36,7 +36,8 @@ class Navbar extends Component {
      }
 
      componentWillUnmount() {
-         window.removeEventListener('scroll');
+         window.removeEventListener('scroll', () =>{});
+         this.updateDimensions();
      }
 
      toggleMenu = () => {
@@ -81,9 +82,9 @@ class Navbar extends Component {
                         Home
                     </li></a>
                     <hr />
-                    <a href="#"><li>
-                        Destinations
-                    </li></a>
+                    <Link to={`/destinations`}><li>
+                    Destinations
+                    </li></Link>
                     <hr />
                     <a href="#"><li>
                         Tours

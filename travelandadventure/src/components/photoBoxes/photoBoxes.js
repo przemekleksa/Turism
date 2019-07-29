@@ -8,18 +8,24 @@ import mountain from './mountain.jpg';
 import thailand from './thailand.jpg';
 import tajmahal from './tajmahal.jpg';
 import waterfall from './waterfall.jpg';
+import { Link } from 'react-router-dom';
 
 
 const PhotoBoxes = () => {
     return ( 
             <div className='photo-boxes'>
+                
                 <div className='box'>
+                <Link to="/destinations/mountblanc">
+                    
                     <img src={hike} alt="hike" />
                     <div className="box-title">
                         <h3>Spring hiking</h3>
                         <h4>Just Beautiful</h4>
                     </div>
+                    </Link>
                 </div>
+                
                 <div className='box'>
                     <img src={mountain_hike} alt="mountain hike" />
                     <div className="box-title">

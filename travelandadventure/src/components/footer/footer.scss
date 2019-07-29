@@ -40,6 +40,7 @@ footer {
         padding: 50px 0;
         display: flex;
         align-items: flex-start;
+
         .info {
             width: 25%;
             padding: 0 20px 0 0;
@@ -50,6 +51,12 @@ footer {
         .links {
             width: 25%;
             padding: 0 20px 0 0;
+            a {
+                transition: .5s all;
+                &:hover {
+                    color:$secondary-color;
+                }
+            }
             h3{
                 @include h3;
                 padding: 0 20px;
@@ -102,6 +109,14 @@ footer {
         background-color: #000;
         text-align: center;
         padding: 30px;
+        a {
+            transition: .5s all;
+            color: $primary-color;
+            text-decoration: none;
+            &:hover {
+                color:$secondary-color;
+            }
+        }
     }
     @include scale;
 }

@@ -56,7 +56,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="last-footer">
-                Recreated by Przemek Leksa
+                Recreated by <a href="http://przemyslawleksa.herokuapp.com/">Przemek Leksa</a>
             </div>
             
         </footer>

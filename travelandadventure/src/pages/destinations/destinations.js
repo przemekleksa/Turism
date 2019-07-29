@@ -10,12 +10,16 @@ const Destinations = () => {
     return ( 
         
         <div id="destinations">
-        <Navbar />
-            <Title />
+            
+                <Navbar />
+                <Title name="Destinations" subtitle="Modern & Beautiful WordPress Theme for all Kinds of Travel and Tourism Busines."/>
+            
+        
             <div className="destination-boxes">
                 <PhotoBoxes />
+                <Footer />
             </div>
-            <Footer />
+            
         </div>
      );
 }
