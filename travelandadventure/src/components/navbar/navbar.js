@@ -78,17 +78,17 @@ class Navbar extends Component {
                  {/* <div className={(this.state.isOpen && this.state.scrolled ? 'burger alternative' : 'burger')} onClick={this.toggleMenu}> */}
                     
                 <ul className={(this.state.isOpen) ? 'menu open': 'menu'}>
-                    <a href="#"><li>
+                <Link to={`/`}><li>
                         Home
-                    </li></a>
+                    </li></Link>
                     <hr />
                     <Link to={`/destinations`}><li>
                     Destinations
                     </li></Link>
                     <hr />
-                    <a href="#"><li>
+                    <Link to={`/tours`}><li>
                         Tours
-                    </li></a>
+                    </li></Link>
                     <hr />
                     <a href="#"><li>
                         Pages
